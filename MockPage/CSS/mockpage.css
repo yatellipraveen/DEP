@@ -1,0 +1,204 @@
+header{
+    background-color: rgb(22, 22, 48);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.heading{
+    color:  rgb(22, 22, 48); 
+    border: 2px solid orangered;
+    width: 28%;
+    height: 70px;
+    background-color: white;
+    text-align: center;
+    line-height: 1;
+
+}
+.content{
+    margin-left: 20px;
+    margin-right: 20px;
+    color:  rgb(22, 22, 48);
+}
+
+.mainheader{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.subheader{
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+.dashboard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+.category{
+   width: 253px;
+   line-height: 2;
+   font-family: 'Noto Sans KR', sans-serif;
+   font-size: 80%;
+    
+}
+
+.category label{
+    font-weight: bold;
+}
+
+
+.header{ 
+   font-family: 'Noto Sans KR', sans-serif;
+   font-size: 150%;
+   font-weight: bold;
+}
+.subscribe{
+   width: 253px;
+   line-height: 2;
+   font-family: 'Noto Sans KR', sans-serif;
+   font-size: 80%;
+   
+}
+
+.subscribe label{
+    font-weight: bold;
+}
+
+.subscribe input[type="email"]{
+    width: 150px;
+    height: 23px;
+    border-color: black;
+    border-width: 1px;
+}
+
+
+.subscribe button{
+    height :27px;
+    color: white;
+    background-color: black;
+    border-width: 0px;
+    margin-left: -5px;
+}
+.category select{
+    width : 220px;
+    height: 30px;
+}
+.one{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    word-wrap: break-word;
+}
+.articlecontent{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.articleheading{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+}
+.timestamp{
+    font-size: 11px;
+    opacity: 0.75;
+}
+
+.button button{
+    color: white;
+    background-color: rgb(187, 72, 31);
+    height: 30px;
+    padding-left: 20px ;
+    padding-right: 20px;
+    font-size: 11px;
+    font-weight: 10;
+    border-width: 0px;
+}
+.articletext{
+    font-size: 14px;
+    width: auto;
+}
+
+.divider{
+    opacity: 0.4;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: -webkit-sticky;
+    background-color: rgb(22, 22, 48);
+    color: white;
+    height: 30px;
+    font-size: small;
+    margin-bottom: 0;
+    
+}
+
+/* Mobile Screen*/
+@media screen and (max-width: 720px) {
+
+    .heading{
+        width: 300px;
+    }
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 150px;
+        align-items: initial;
+        /* background-color: grey; */
+    }
+
+    .dashboard :nth-child(2){ order : -1;
+        text-align: center;
+    }
+
+    .one{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-right: 10%;
+        word-wrap: break-word;
+    }
+
+    .articlecontent{
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 100px;
+    }
+
+    .category{
+        display: flex;
+        width: 100%;
+    }
+
+    .category select{margin-left: 20px;}
+    .subscribe{display: flex;}
+    .subscribe input{ margin-left: 64px;}
+    .image{ text-align: center;}
+    .one{    margin-right: 0; }
+    .articlecontent{     margin-right: 0px; }
+
+    .timestamp{margin-top: 5px; margin-bottom: 5px;}
+    .button{ margin-top: 5px;}
+  }
