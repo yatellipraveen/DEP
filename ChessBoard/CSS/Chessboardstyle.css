@@ -1,0 +1,77 @@
+header{
+    height: 100%;
+    width: 800px;
+    border-style: solid;
+    border-color: black;
+}
+.box{
+    box-sizing: border-box;
+}
+.white{
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    font-size: 80px;
+    text-align: center;
+}
+.mark{
+    border: 5px solid rgb(47, 90, 233);
+}
+.black{
+    background-color: rgb(97, 93, 93);
+    height: 100px;
+    width: 100px;
+    font-size: 80px;
+    text-align: center;
+}
+
+.one{
+    display: flex;
+    width: 800px;
+    height: 100px;
+    
+}
+ 
+.two{
+    display: flex;
+    width: 800px;
+    height: 100px;
+  
+}
+
+.three{
+    display: flex;
+    width: 800px;
+    height: 100px;
+}
+ 
+.four{
+    display: flex;
+    width: 800px;
+    height: 100px;
+}
+.five{
+    display: flex;
+    width: 800px;
+    height: 100px;
+
+}
+ 
+.six{
+    display: flex;
+    width: 800px;
+    height: 100px;
+}
+
+.seven{
+    display: flex;
+    width: 800px;
+    height: 100px;
+}
+ 
+.eight{
+    display: flex;
+    width: 800px;
+    height: 100px;
+}
+
