@@ -3,27 +3,85 @@
 //Calculating with functinos
 //seven(times(five()))
 
-var arr=Array(3);
-var index=2;
-function zero() { arr[index--]=0; return util() }
-function one() { arr[index--]=1; return util()}
-function two() { arr[index--]=2; return util()}
-function three() { arr[index--]=3; return util()}
-function four() { arr[index--]=4; return util()}
-function five() { arr[index--]=5; return util()}
-function six() { arr[index--]=6; return util()}
-function seven() { arr[index--]=7; return util()}
-function eight() { arr[index--]=8; return util()}
-function nine() { arr[index--]=9; return util()}
 
-function plus() { arr[index--]="+" }
-function minus() { arr[index--]="-" }
-function times() { arr[index--]="*" }
-function dividedBy() { arr[index--]="/" }
+function zero(param) { 
+  if(param){
+    return param(0);
+  }
+  else return 0;
+}
+function one(param) { 
+  if(param){
+    return param(1);
+  }
+  else return 1;
+}
+function two(param) { 
+  if(param){
+    return param(2);
+  }
+  else return 2;
+}
+function three(param) { 
+  if(param){
+    return param(3);
+  }
+  else return 3;
+}
+function four(param) { 
+  if(param){
+    return param(4);
+  }
+  else return 4;
+}
+function five(param) { 
+  if(param){
+    return param(5);
+  }
+  else return 5;
+}
+function six(param) { 
+  if(param){
+    return param(6);
+  }
+  else return 6;
+}
+function seven(param) { 
+  if(param){
+    return param(7);
+  }
+  else return 7;
+}
+function eight(param) { 
+  if(param){
+    return param(8);
+  }
+  else return 8;
+}
+function nine(param) { 
+  if(param){
+    return param(9);
+  }
+  else return 9;
+}
 
-function util(){
-    if(index==-1){
-      index=2;
-      return Math.floor(eval(arr.join('')))
-    }
+function plus(value1) { 
+  return function(value2){
+    return value1+value2;
+  }
+}
+function minus(value1) { 
+  return function(value2){
+    return value2-value1;
+  }
+ }
+function times(value1) { 
+  return function(value2){
+    return value1*value2;
+  }
+ }
+function dividedBy(value1) { 
+  return function(value2){
+    return Math.floor(value2/value1);
+  }
 }
