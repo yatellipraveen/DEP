@@ -1,13 +1,13 @@
-//https://www.codaysewars.com/kata/568d0dd208ee69389d000016/train/javascript
+//https://www.codewars.com/kata/568d0dd208ee69389d000016/train/javascript
 
 // Transportation
 
-function rentalCarCost(days) {
-  var total = 40 * days;
-  if (days >= 7) {
-    total = total - 50;
-  } else if (days >= 3) {
-    total = total - 20;
+function rentalCarCost(carRentDays) {
+  var totalCost = 40 * carRentDays;
+  if (carRentDays >= 7) {
+    totalCost = totalCost - 50;
+  } else if (carRentDays >= 3) {
+    totalCost = totalCost - 20;
   }
-  return total;
+  return totalCost;
 }

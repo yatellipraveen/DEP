@@ -2,5 +2,5 @@
 //Printing Array Element
 
 function printArray(array) {
-  return array.join(",");
+  return array.join();
 }

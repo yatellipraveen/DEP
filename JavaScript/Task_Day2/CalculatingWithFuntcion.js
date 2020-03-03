@@ -4,54 +4,34 @@
 //seven(times(five()))
 
 function zero(param) {
-  if (param) {
-    return param(0);
-  } else return 0;
+  return param ? param(0) : 0;
 }
 function one(param) {
-  if (param) {
-    return param(1);
-  } else return 1;
+  return param ? param(1) : 1;
 }
 function two(param) {
-  if (param) {
-    return param(2);
-  } else return 2;
+  return param ? param(2) : 2;
 }
 function three(param) {
-  if (param) {
-    return param(3);
-  } else return 3;
+  return param ? param(3) : 3;
 }
 function four(param) {
-  if (param) {
-    return param(4);
-  } else return 4;
+  return param ? param(4) : 4;
 }
 function five(param) {
-  if (param) {
-    return param(5);
-  } else return 5;
+  return param ? param(5) : 5;
 }
 function six(param) {
-  if (param) {
-    return param(6);
-  } else return 6;
+  return param ? param(6) : 6;
 }
 function seven(param) {
-  if (param) {
-    return param(7);
-  } else return 7;
+  return param ? param(7) : 7;
 }
 function eight(param) {
-  if (param) {
-    return param(8);
-  } else return 8;
+  return param ? param(8) : 8;
 }
 function nine(param) {
-  if (param) {
-    return param(9);
-  } else return 9;
+  return param ? param(9) : 9;
 }
 
 function plus(value1) {
