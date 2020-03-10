@@ -10,7 +10,6 @@ function prefill(arrayLength, value) {
 
   var prefillArray = new Array(Math.floor(arrayLength));
   prefillArray.fill(value);
-  console.log(prefillArray);
   return prefillArray;
 }
 
