@@ -6,7 +6,7 @@ function cache(func) {
   let cacheObject = {};
   let cacheArray = new Array();
 
-  return function test(value1, value2) {
+  return function(value1, value2) {
     let argumentArray = new Array();
     argumentArray.push(value1);
     argumentArray.push(value2);
