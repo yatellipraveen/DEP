@@ -1,5 +1,16 @@
 //global variable declaration
 
+let pageIndex = -1;
+let items = new Array();
+let totalresult = 0;
+let elementsPerPage = 4;
+const url =
+  "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCyjRf9SI3vh3FATvFJP1f2z6-0GEyaCCA&type=video&part=snippet&order=viewCount&maxResults=15&q=";
+let query = "";
+let nextPageToken = "";
+let previousPageToken = "";
+
+//initialize function
 (function init() {
   headerDiv();
   searchDiv();
@@ -99,16 +110,6 @@ function navigationDiv() {
   }
 }
 
-let pageIndex = -1;
-let items = new Array();
-let totalresult = 0;
-let elementsPerPage = 4;
-const url =
-  "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCyjRf9SI3vh3FATvFJP1f2z6-0GEyaCCA&type=video&part=snippet&order=viewCount&maxResults=15&q=";
-let query = "";
-let nextPageToken = "";
-let previousPageToken = "";
-
 //function to fetch data and add to the global list items
 function getVideos(queryUrl) {
   return fetch(queryUrl)
@@ -132,7 +133,6 @@ async function populateView(pageIndex) {
   if (pageIndex * elementsPerPage > totalresult - elementsPerPage) {
     await getVideos(url + query + "&pageToken=" + nextPageToken);
   }
-  console.log(pageIndex);
   for (
     let i = pageIndex * elementsPerPage;
     i < pageIndex * elementsPerPage + elementsPerPage;
