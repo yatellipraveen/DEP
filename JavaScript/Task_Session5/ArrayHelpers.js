@@ -26,11 +26,11 @@ Array.prototype.sum = function() {
 };
 
 Array.prototype.even = function() {
-  let evenArray = this.filter(element => element % 2 == 0);
+  let evenArray = this.filter(element => element % 2 === 0);
   return evenArray;
 };
 
 Array.prototype.odd = function() {
-  let oddArray = this.filter(element => element % 2 == 1);
+  let oddArray = this.filter(element => element % 2 === 1);
   return oddArray;
 };
