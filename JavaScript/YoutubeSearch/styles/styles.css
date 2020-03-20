@@ -39,6 +39,7 @@ button:hover {
 
 .navigation {
   display: flex;
+  justify-content: space-between;
 }
 
 .card {
@@ -55,20 +56,12 @@ button:hover {
 
 .previous,
 .next {
+  margin: 10rem;
   padding: 8px;
   width: 100px;
   display: none;
 }
 
-.previous {
-  position: fixed;
-  left: 30px;
-}
-
-.next {
-  position: fixed;
-  right: 0px;
-}
 
 .container {
   padding: 2px 16px;

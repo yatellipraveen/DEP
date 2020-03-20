@@ -56,7 +56,7 @@ function searchDiv() {
     await getVideos(url + query);
     pageIndex++;
     populateView(pageIndex);
-    const nextButton=document.querySelector(".next");
+    const nextButton = document.querySelector(".next");
     nextButton.style.display = "block";
   });
 }
@@ -91,25 +91,14 @@ function navigationDiv() {
   body.appendChild(navigationDiv);
 
   previousButton.addEventListener("click", event => {
-    clearView();
     pageIndex--;
     populateView(pageIndex);
   });
 
   nextButton.addEventListener("click", event => {
-    clearView();
     pageIndex++;
     populateView(pageIndex);
   });
-
-  //clear the view on the page
-  function clearView() {
-    const cardOneImg = document.querySelectorAll(".card");
-    const displayDiv=document.querySelector(".display");
-    for (let i = 0; i < cardOneImg.length; i++) {
-      displayDiv.removeChild(cardOneImg[i]);
-    }
-  }
 }
 
 //function to fetch data and add to the global list items
@@ -127,7 +116,17 @@ function getVideos(queryUrl) {
     });
 }
 
+//clear the view on the page
+function clearView() {
+  const cardOneImg = document.querySelectorAll(".card");
+  const displayDiv = document.querySelector(".display");
+  for (let i = 0; i < cardOneImg.length; i++) {
+    displayDiv.removeChild(cardOneImg[i]);
+  }
+}
+
 async function populateView(pageIndex) {
+  clearView();
   let previousButton = document.querySelector(".previous");
   if (pageIndex <= 0) {
     previousButton.style.display = "none";
