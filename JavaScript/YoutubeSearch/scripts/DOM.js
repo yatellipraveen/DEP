@@ -56,6 +56,7 @@ function searchDiv() {
     await getVideos(url + query);
     pageIndex++;
     populateView(pageIndex);
+    const nextButton=document.querySelector(".next");
     nextButton.style.display = "block";
   });
 }
@@ -104,6 +105,7 @@ function navigationDiv() {
   //clear the view on the page
   function clearView() {
     const cardOneImg = document.querySelectorAll(".card");
+    const displayDiv=document.querySelector(".display");
     for (let i = 0; i < cardOneImg.length; i++) {
       displayDiv.removeChild(cardOneImg[i]);
     }
@@ -139,28 +141,28 @@ async function populateView(pageIndex) {
     i++
   ) {
     //img tag
-    let img = document.createElement("img");
+    const img = document.createElement("img");
     img.src = items[i].snippet.thumbnails.medium.url;
     img.style = "width:100%";
 
     //title tag
-    let title = document.createElement("h4");
+    const title = document.createElement("h4");
     title.textContent = items[i].snippet.title;
 
     //description tag
-    let description = document.createElement("div");
+    const description = document.createElement("div");
     description.classList.add("container");
-    let docText = document.createTextNode(items[i].snippet.description);
+    const docText = document.createTextNode(items[i].snippet.description);
     description.appendChild(docText);
 
     //appending
-    let card = document.createElement("div");
+    const card = document.createElement("div");
     card.classList.add("card");
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(description);
 
-    let displayDiv = document.querySelector(".display");
+    const displayDiv = document.querySelector(".display");
     displayDiv.appendChild(card);
   }
 }
