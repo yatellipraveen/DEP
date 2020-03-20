@@ -6,16 +6,9 @@ import { ManualComponent } from './manual/manual.component';
 import { CliComponent } from './cli/cli.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ManualComponent,
-    CliComponent
-  ],
-  imports: [
-    BrowserModule,
-  
-  ],
+  declarations: [AppComponent, ManualComponent, CliComponent],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

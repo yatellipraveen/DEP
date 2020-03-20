@@ -1,4 +1,5 @@
-.cli-class{
+/* not required since using bootstrap */
+/* .cli-class{
 
     display: flex;
     justify-content: space-between;
@@ -7,4 +8,4 @@
 
 .card{
     width: 18rem;
-}
+} */
