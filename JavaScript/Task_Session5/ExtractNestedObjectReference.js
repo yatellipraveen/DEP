@@ -5,11 +5,11 @@
 Object.prototype.hash = function(string) {
   let tokenList = string.split(".");
   let innerObject = this;
-  for (let i = 0; i < tokenList.length; i++) {
-    if (innerObject[tokenList[i]] === undefined) {
+  for (let index = 0; index < tokenList.length; index++) {
+    if (innerObject[tokenList[index]] === undefined) {
       return undefined;
     }
-    innerObject = innerObject[tokenList[i]];
+    innerObject = innerObject[tokenList[index]];
   }
   return innerObject;
 };

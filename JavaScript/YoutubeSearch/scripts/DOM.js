@@ -39,7 +39,7 @@ function searchDiv() {
   searchBox.setAttribute("placeholder", "search");
 
   const searchButton = document.createElement("button");
-  searchButton.innerHTML = "&#128269;";
+  searchButton.textContent = "\uD83D\uDD0D";
 
   //search div
   const searchDiv = document.createElement("div");
@@ -57,7 +57,7 @@ function searchDiv() {
     pageIndex++;
     populateView(pageIndex);
     const nextButton = document.querySelector(".next");
-    nextButton.style.display = "block";
+    nextButton.classList.add("block");
   });
 }
 
@@ -129,8 +129,10 @@ async function populateView(pageIndex) {
   clearView();
   let previousButton = document.querySelector(".previous");
   if (pageIndex <= 0) {
-    previousButton.style.display = "none";
-  } else previousButton.style.display = "block";
+    previousButton.classList.add("none");
+  } else {
+    previousButton.classList.add("block");
+  }
   if (pageIndex * elementsPerPage > totalresult - elementsPerPage) {
     await getVideos(url + query + "&pageToken=" + nextPageToken);
   }
@@ -142,7 +144,7 @@ async function populateView(pageIndex) {
     //img tag
     const img = document.createElement("img");
     img.src = items[i].snippet.thumbnails.medium.url;
-    img.style = "width:100%";
+    img.classList.add("width100");
 
     //title tag
     const title = document.createElement("h4");

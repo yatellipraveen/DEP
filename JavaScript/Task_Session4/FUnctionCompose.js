@@ -6,8 +6,8 @@ function compose() {
   let functionArgs = arguments;
   return function(param) {
     let result = param;
-    for (let i = functionArgs.length - 1; i >= 0; i--) {
-      result = functionArgs[i](result);
+    for (let iterator = functionArgs.length - 1; iterator >= 0; iterator--) {
+      result = functionArgs[iterator](result);
     }
     return result;
   };
